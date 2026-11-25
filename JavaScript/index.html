@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript</title>
+
+    <script>
+
+        // 1. VAR
+        var age = 20;
+        age = 30;
+        var age = 40;
+
+        console.log("Age:", age);
+
+
+        // 2. LET
+        let course = "mern";
+        course = "dsa";
+
+        console.log("Course:", course);
+
+
+        // 3. CONST
+        const college = "Sri Eshwar College of Engineering";
+
+        console.log("College:", college);
+
+
+        // 4. LOGIN CONDITION
+        let username = "sri";
+        let password = "12345678";
+
+        if (username == "sri" && password == "12345678") {
+            console.log("Login successful");
+        }
+        else {
+            console.log("Login failed");
+        }
+
+
+        // 5. STUDENT FUNCTION
+        function student(name, college = "Sri Eshwar") {
+            console.log(`Hello ${name}, welcome to ${college} college`);
+        }
+
+        student("sri", "Sri Eshwar");
+        student("kumar", "Sri Eshwar");
+        student("karthik", "Sri Eshwar");
+        student("siva", "Sri Eshwar");
+
+
+        // 6. EMPLOYEE FUNCTION
+        function employee(name, company = "Google", college = "Sri Eshwar") {
+            console.log(`Hello ${name}, welcome to ${company} company. You studied at ${college} college.`);
+        }
+
+        employee("Sakthi", "Zoho", "Sri Eshwar");
+        employee("Kumar", "Microsoft", "PSG");
+        employee("Siva", "Google", "KCT");
+        employee("Karthik");
+
+
+        // 7. ARROW FUNCTION WITHOUT PARAMETER
+        const hello = () => {
+            console.log("Hello JavaScript");
+        };
+
+        hello();
+
+
+        // 8. ARROW FUNCTION WITH PARAMETER
+        const greet = (name) => {
+            console.log(`Hello ${name}, welcome to JavaScript`);
+        };
+
+        greet("Sakthi");
+
+
+        // 9. RETURN ARROW FUNCTION WITHOUT PARAMETER
+        const message = () => {
+            return "Hello JavaScript";
+        };
+
+        console.log(message());
+
+
+        // 10. RETURN ARROW FUNCTION WITH PARAMETER
+        const welcome = (name) => {
+            return `Hello ${name}, welcome to JavaScript`;
+        };
+
+        console.log(welcome("Sakthi"));
+
+
+        // 11. FUNCTION PASSING ANOTHER FUNCTION AS ARGUMENT
+        function sece(stud) {
+            console.log("Welcome to SECE");
+            stud();
+        }
+
+        function stud() {
+            console.log("Students of Sri Eshwar College of Engineering");
+        }
+
+        sece(stud);
+
+
+        // 12. CALLBACK FUNCTION
+        function seceCallback(callback) {
+            console.log("Welcome to SECE");
+            callback();
+        }
+
+        seceCallback(function() {
+            console.log("Welcome Students!");
+        });
+
+
+        // 13. WHATSAPP FUNCTION
+        function whatsapp() {
+            console.log("I am sending a WhatsApp notification");
+        }
+
+
+        // 14. NOTIFICATION FUNCTION
+        function notification(callback) {
+            console.log("Notification started");
+            callback();
+        }
+
+        notification(whatsapp);
+
+
+        // 15. PROMISE - FETCH API
+        let fetch_api = new Promise((resolve, reject) => {
+
+            let api = false;
+
+            if (api) {
+                resolve("Fetched API data");
+            }
+            else {
+                reject("Failed to fetch");
+            }
+
+        });
+
+        fetch_api
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+
+
+        // 16. PROMISE - ZOMATO FOOD ORDER WITH 5 SECONDS DELAY
+        let zomato_order = new Promise((resolve, reject) => {
+
+            console.log("Your Zomato order is processing...");
+
+            setTimeout(() => {
+
+                let order = true;
+
+                if (order) {
+                    resolve("Food order placed successfully!");
+                }
+                else {
+                    reject("Food order failed!");
+                }
+
+            }, 5000);
+
+        });
+
+        zomato_order
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Learning</h1>
+
+    <p>Check the browser console for output.</p>
+
+</body>
+
+</html>
